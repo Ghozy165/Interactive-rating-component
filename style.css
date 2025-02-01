@@ -80,6 +80,7 @@ p {
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
+    transition: all .3s ease;
 }
 .btn-rate:hover {
     background-color: var(--primary-orange);
@@ -102,6 +103,7 @@ p {
     border-radius: 2rem;
     border: none;
     cursor: pointer;
+    transition: all .3s ease;
 }
 .btn-submit:hover {
     background-color: var(--neutral-white);
