@@ -65,14 +65,29 @@ p {
 }
 
 .rate {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px black solid;
+}
+
 .btn-rate {
+    appearance: none;
+}
+
+.form-group > label {
     min-width: 2.75rem;
     min-height: 2.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     border-radius: 50%;
     background-color: var(--neutral-light-grey-opacity);
@@ -82,11 +97,13 @@ p {
     cursor: pointer;
     transition: all .3s ease;
 }
-.btn-rate:hover {
+
+.form-group > label:hover {
     background-color: var(--primary-orange);
     color: var(--neutral-dark-blue);
 }
-.btn-rate:focus, .btn-rate:active {
+
+input[type="radio"]:checked + label {
     background-color: var(--neutral-white);
     color: var(--neutral-dark-blue);
     outline: none;
@@ -160,7 +177,7 @@ p {
     p {
         font-size: 1rem;
     }
-    .btn-rate {
+    .form-group > label {
         min-width: 3.5rem;
         min-height: 3.5rem;
         font-size: 1.15rem;

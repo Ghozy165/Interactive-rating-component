@@ -21,15 +21,33 @@
       <div class="icon">
         <img src="./images/icon-star.svg" alt="icon">
       </div>
-      <div class="title">How did we do?</div>
+      <h2 class="title">How did we do?</h2>
       <p>Please let us know how we did with your support request. All feedback is appreciated 
           to help us improve our offering!</p>
       <div class="rate">
-        <button class="btn-rate" aria-label="Rate 1 out of 5">1</button>
-        <button class="btn-rate" aria-label="Rate 2 out of 5">2</button>
-        <button class="btn-rate" aria-label="Rate 3 out of 5">3</button>
-        <button class="btn-rate" aria-label="Rate 4 out of 5">4</button>
-        <button class="btn-rate" aria-label="Rate 5 out of 5">5</button>
+        <fieldset class="rate">
+          <legend>Rating</legend>
+          <div class="form-group">
+            <input type="radio" id="rate-1" name="rate" value="1" aria-label="Rate 1 out of 5" class="btn-rate" />
+            <label for="rate-1">1</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" id="rate-2" name="rate" value="2" aria-label="Rate 2 out of 5" class="btn-rate" />
+            <label for="rate-2">2</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" id="rate-3" name="rate" value="3" aria-label="Rate 3 out of 5" class="btn-rate" />
+            <label for="rate-3">3</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" id="rate-4" name="rate" value="4" aria-label="Rate 4 out of 5" class="btn-rate" />
+            <label for="rate-4">4</label>
+          </div>
+          <div class="form-group">
+            <input type="radio" id="rate-5" name="rate" value="5" aria-label="Rate 5 out of 5" class="btn-rate" />
+            <label for="rate-5">5</label>
+          </div>
+        </fieldset>
       </div>
       <button class="btn-submit">SUBMIT</button>
     </div>
