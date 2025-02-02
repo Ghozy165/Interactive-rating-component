@@ -9,11 +9,44 @@
   font-family: 'Overpass', sans-serif;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* CSS Reset Josh Comeau */
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+  
+:focus {
+  outline: 2px dashed #000;
+  outline-offset: 2px;
+}
+  
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid blue;
+  outline-offset: 2px;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* End CSS Reset */
 
 body {
     background-color: var(--neutral-very-dark-blue);
@@ -21,7 +54,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
 }
 
 .container {
@@ -59,7 +91,7 @@ body {
     font-weight: 700;
 }
 p {
-    font-size: 15px;
+    font-size: .9rem;
     color: var(--neutral-light-grey);
     line-height: 1.5rem;
 }
@@ -71,11 +103,18 @@ p {
     align-items: center;
 }
 
+fieldset {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+}
+
 .form-group {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px black solid;
 }
 
 .btn-rate {
@@ -119,7 +158,6 @@ input[type="radio"]:checked + label {
     margin-bottom: .5rem;
     border-radius: 2rem;
     border: none;
-    cursor: pointer;
     transition: all .3s ease;
 }
 .btn-submit:hover {
@@ -156,7 +194,7 @@ input[type="radio"]:checked + label {
     border: 0;
 }
 .attribution {
-    font-size: 11px; 
+    font-size: 1rem; 
     text-align: center;
 }
 .attribution a {
