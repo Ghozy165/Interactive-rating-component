@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const rateButton = document.querySelector('.rate');
+  const rateRadios = document.getElementsByName('rate');
   const submitButton = document.querySelector('.btn-submit');
   const rateScore = document.getElementById('score');
   const ratingCard = document.querySelector('.rating');
@@ -7,18 +7,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let selectedRate = null;
 
-  if (!rateButton || !submitButton || !rateScore || !ratingCard || !thanksCard) {
+  if (!rateRadios || !submitButton || !rateScore || !ratingCard || !thanksCard) {
     console.error('Error: Element not found.');
     return;
   }
 
-  rateButton.addEventListener('click', (event) => {
-    if (event.target.classList.contains('btn-rate')) {
-      selectedRate = event.target.textContent;
+  function getSelectedValue() {
+    for (var i = 0; i < rateRadios.length; i++) {
+      if (rateRadios[i].checked) {
+        selectedRate = rateRadios[i].value;
+        break;
+      }
     }
-  });
+  }
 
   submitButton.addEventListener('click', () => {
+    getSelectedValue();
     if (!selectedRate) {
       alert('Please select a rating first.');
       return;
@@ -30,3 +34,4 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
   
+
